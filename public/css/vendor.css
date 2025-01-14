@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ai-chat-900: #1a365d;
+  --ai-chat-800: #2c5282;
+  --ai-chat-700: #4a5568;
+  --ai-chat-100: #f7fafc;
+  --ai-chat-primary: #63b3ed;
+  --ai-chat-primary-focus: #4299e1;
+
+  --human-chat-900: #2d3748;
+  --human-chat-800: #4a5568;
+  --human-chat-700: #718096;
+  --human-chat-100: #edf2f7;
+  --human-chat-primary: #68d391;
+  --human-chat-primary-focus: #48bb78;
+}
+
+.ai-chat {
+  background-color: var(--ai-chat-900);
+  color: var(--ai-chat-100);
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.ai-chat h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ai-chat-100);
+  margin-bottom: 1rem;
+}
+
+.ai-chat h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ai-chat-100);
+  margin-bottom: 0.75rem;
+}
+
+.ai-chat h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--ai-chat-100);
+  margin-bottom: 0.5rem;
+}
+
+.ai-chat p {
+  font-size: 1rem;
+  color: var(--ai-chat-100);
+  margin-bottom: 0.75rem;
+}
+
+.ai-chat ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 1rem;
+}
+
+.ai-chat li {
+  font-size: 1rem;
+  color: var(--ai-chat-100);
+  margin-bottom: 0.25rem;
+}
+
+.ai-chat a {
+  color: var(--ai-chat-primary);
+  text-decoration: underline;
+}
+
+.ai-chat a:hover {
+  color: var(--ai-chat-primary-focus);
+}
+
+.ai-chat code {
+  background-color: var(--ai-chat-700);
+  color: var(--ai-chat-100);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.ai-chat pre {
+  background-color: var(--ai-chat-700);
+  color: var(--ai-chat-100);
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.ai-chat blockquote {
+  border-left: 4px solid var(--ai-chat-100);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--ai-chat-100);
+  margin-bottom: 1rem;
+}
+
+.ai-chat img {
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.ai-chat table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.ai-chat th {
+  background-color: var(--ai-chat-700);
+  color: var(--ai-chat-100);
+  font-weight: 600;
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid var(--ai-chat-800);
+}
+
+.ai-chat td {
+  background-color: var(--ai-chat-800);
+  color: var(--ai-chat-100);
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--ai-chat-700);
+}
+
+.ai-chat tr:hover td {
+  background-color: var(--ai-chat-700);
+}
+
+.ai-chat th:first-child,
+.ai-chat td:first-child {
+  border-left: 1px solid var(--ai-chat-700);
+}
+
+.ai-chat th:last-child,
+.ai-chat td:last-child {
+  border-right: 1px solid var(--ai-chat-700);
+}
+
+.ai-chat ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-bottom: 1rem;
+}
+
+.ai-chat ol li {
+  font-size: 1rem;
+  color: var(--ai-chat-100);
+  margin-bottom: 0.25rem;
+}
+
+.human-chat {
+  background-color: var(--human-chat-900);
+  color: var(--human-chat-100);
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: end;
+}
+
+.human-chat h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--human-chat-100);
+  margin-bottom: 1rem;
+}
+
+.human-chat h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--human-chat-100);
+  margin-bottom: 0.75rem;
+}
+
+.human-chat h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--human-chat-100);
+  margin-bottom: 0.5rem;
+}
+
+.human-chat p {
+  font-size: 1rem;
+  color: var(--human-chat-100);
+  margin-bottom: 0.75rem;
+}
+
+.human-chat ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 1rem;
+}
+
+.human-chat li {
+  font-size: 1rem;
+  color: var(--human-chat-100);
+  margin-bottom: 0.25rem;
+}
+
+.human-chat a {
+  color: var(--human-chat-primary);
+  text-decoration: underline;
+}
+
+.human-chat a:hover {
+  color: var(--human-chat-primary-focus);
+}
+
+.human-chat code {
+  background-color: var(--human-chat-700);
+  color: var(--human-chat-100);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.human-chat pre {
+  background-color: var(--human-chat-700);
+  color: var(--human-chat-100);
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.human-chat blockquote {
+  border-left: 4px solid var(--human-chat-100);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--human-chat-100);
+  margin-bottom: 1rem;
+}
+
+.human-chat img {
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.human-chat table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.human-chat th {
+  background-color: var(--human-chat-700);
+  color: var(--human-chat-100);
+  font-weight: 600;
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid var(--human-chat-800);
+}
+
+.human-chat td {
+  background-color: var(--human-chat-800);
+  color: var(--human-chat-100);
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--human-chat-700);
+}
+
+.human-chat tr:hover td {
+  background-color: var(--human-chat-700);
+}
+
+.human-chat th:first-child,
+.human-chat td:first-child {
+  border-left: 1px solid var(--human-chat-700);
+}
+
+.human-chat th:last-child,
+.human-chat td:last-child {
+  border-right: 1px solid var(--human-chat-700);
+}
+
+.human-chat ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-bottom: 1rem;
+}
+
+.human-chat ol li {
+  font-size: 1rem;
+  color: var(--human-chat-100);
+  margin-bottom: 0.25rem;
+}

@@ -1,0 +1,39 @@
+{
+  "name": "almigo",
+  "version": "1.0.0",
+  "description": "## Overview Almigo is a personal AI chat platform designed to provide users with an intelligent and interactive conversational experience. Whether you're looking for assistance, information, or just a friendly chat, Almigo is here to help.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build_css": "npx tailwindcss -i public/css/vendor.css -o public/css/style.css --watch ",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@cia.github.com:IrwantoCia/almigo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pinecone-database/pinecone": "^4.0.0",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cookie-session": "^2.1.0",
+    "csrf": "^3.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.77.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.9",
+    "daisyui": "^4.12.23",
+    "nodemon": "^3.1.9",
+    "tailwindcss": "^3.4.17"
+  }
+}

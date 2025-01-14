@@ -1,0 +1,39 @@
+<div class="max-w-md mx-auto mt-10 p-6 bg-base-200 rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Sign Up</h2>
+    {{#if error}}
+        <div class="alert alert-error mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span>{{error}}</span>
+        </div>
+    {{/if}}
+    {{#if success}}
+        <div class="alert alert-success mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span>{{success}}</span>
+        </div>
+    {{/if}}
+    <form action="/auth/signup" method="POST">
+        <div class="form-control mb-4">
+            <label class="label" for="email">
+                <span class="label-text">Email</span>
+            </label>
+            <input type="email" id="email" name="email" class="input input-bordered w-full" required>
+        </div>
+        <div class="form-control mb-4">
+            <label class="label" for="password">
+                <span class="label-text">Password</span>
+            </label>
+            <input type="password" id="password" name="password" class="input input-bordered w-full" required>
+        </div>
+        <div class="form-control mb-6">
+            <label class="label" for="confirmPassword">
+                <span class="label-text">Confirm Password</span>
+            </label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="input input-bordered w-full" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Sign Up</button>
+    </form>
+    <div class="mt-4 text-center">
+        <p>Already have an account? <a href="/auth/signin" class="text-primary hover:underline">Log in</a></p>
+    </div>
+</div>

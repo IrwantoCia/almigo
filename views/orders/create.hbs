@@ -1,0 +1,25 @@
+<div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <h1 class="text-3xl font-bold mb-6">{{#if data.id}}Edit Order{{else}}Create Order{{/if}}</h1>
+    <form action="{{#if data.id}}/orders/{{data.id}}/edit{{else}}/orders/create{{/if}}" method="POST" class="space-y-4">
+        <div>
+            <label for="product_name" class="block text-sm font-medium text-gray-700">Product Name</label>
+            <input type="text" id="product_name" name="product_name" value="{{data.product_name}}" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
+        </div>
+        <div>
+            <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
+            <input type="number" id="price" name="price" value="{{data.price}}" step="0.01" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
+        </div>
+        <div>
+            <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
+            <select id="status" name="status" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
+                <option value="pending" {{#if (eq data.status "pending")}}selected{{/if}}>Pending</option>
+                <option value="shipped" {{#if (eq data.status "shipped")}}selected{{/if}}>Shipped</option>
+                <option value="delivered" {{#if (eq data.status "delivered")}}selected{{/if}}>Delivered</option>
+                <option value="cancelled" {{#if (eq data.status "cancelled")}}selected{{/if}}>Cancelled</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">{{#if data.id}}Update Order{{else}}Create Order{{/if}}</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,20 @@
+<div class="flex flex-col items-center justify-center h-screen">
+    <h1 class="text-4xl font-bold text-error">403 - Forbidden</h1>
+    <p class="mt-4 text-lg">You do not have permission to access this page.</p>
+    <p class="mt-2 text-lg">You will be redirected to the sign-in page in <span id="countdown">5</span> seconds...</p>
+</div>
+
+<script>
+    let timeLeft = 5;
+    const countdownElement = document.getElementById('countdown');
+
+    const countdown = setInterval(function() {
+        timeLeft--;
+        countdownElement.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(countdown);
+            window.location.href = "/auth/signin";
+        }
+    }, 1000);
+</script>

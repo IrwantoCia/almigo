@@ -1,0 +1,38 @@
+<div class="orders-container">
+    <h1 class="text-2xl font-bold mb-4">Orders</h1>
+    <div class="overflow-x-auto">
+        <table class="table w-full">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                    <tr>
+                        <td>{{this.id}}</td>
+                        <td>{{this.order_date}}</td>
+                        <td>{{this.product_name}}</td>
+                        <td>${{this.price}}</td>
+                        <td><span class="badge {{this.statusClass}}">{{this.status}}</span></td>
+                        <td>
+                            <a href="/orders/{{this.id}}" class="btn btn-sm btn-primary">View</a>
+                            <a href="/orders/{{this.id}}/edit" class="btn btn-sm btn-secondary">Edit</a>
+                            <form action="/orders/{{this.id}}?_method=DELETE" method="POST" class="inline">
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-4">
+        <a href="/orders/create" class="btn btn-primary">Create New Order</a>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{#if title}}{{title}}{{else}}My Application{{/if}}</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <script src="/js/script.js"></script>
+
+    <meta name="description" content="{{meta.description}}">
+    <meta name="keywords" content="{{meta.keywords}}">
+</head>
+<body class="bg-base-100 overflow-hidden">
+    <!-- Navbar -->
+    <nav class="navbar bg-base-100 shadow-lg">
+        <div class="flex-1">
+            <a href="/" class="btn btn-ghost normal-case text-xl">{{#if title}}{{title}}{{else}}MyApp{{/if}}</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal p-0">
+                {{#if isAuthenticated}}
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/orders">Orders</a></li>
+                    <li><a href="/auth/signout">Sign Out</a></li>
+                {{else}}
+                    <li><a href="/auth/signin">Sign In</a></li>
+                {{/if}}
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Body Placeholder -->
+    <main class="container mx-auto p-4">
+        {{{body}}}
+    </main>
+</body>
+</html>

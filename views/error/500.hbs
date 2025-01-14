@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center justify-center h-screen">
+    <h1 class="text-6xl font-bold text-error">500</h1>
+    <p class="text-2xl mt-4">Internal Server Error</p>
+    <p class="mt-2">The page will be refreshed in <span id="countdown">5</span> seconds.</p>
+</div>
+<script>
+    let countdown = 5;
+    const countdownElement = document.getElementById('countdown');
+
+    const interval = setInterval(() => {
+        countdown--;
+        countdownElement.textContent = countdown;
+
+        if (countdown === 0) {
+            clearInterval(interval);
+            window.location.reload();
+        }
+    }, 1000);
+</script>
